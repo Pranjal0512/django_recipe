@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block start %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive;">Add Recipe</h2>
+    <form class="bg-white p-5 rounded shadow-lg" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="recipeName" class="form-label" style="font-family: 'Montserrat', sans-serif;">Recipe Name</label>
+            <input name="recipe_name" type="text" class="form-control" id="recipeName" placeholder="Enter recipe name" style="font-family: 'Roboto', sans-serif;" required>
+        </div>
+        <div class="mb-3">
+            <label  for="recipeDescription" class="form-label" style="font-family: 'Montserrat', sans-serif;">Recipe Description</label>
+            <textarea name="recipe_description" class="form-control" id="recipeDescription" rows="4" placeholder="Describe the recipe" style="font-family: 'Roboto', sans-serif;" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="recipeImage" class="form-label" style="font-family: 'Montserrat', sans-serif;">Recipe Image</label>
+            <input name="recipe_image" type="file" class="form-control" id="recipeImage" aria-describedby="imageHelp" style="font-family: 'Roboto', sans-serif;">
+            <div id="imageHelp" class="form-text" style="font-family: 'Roboto', sans-serif;">Upload an image of your recipe.</div>
+        </div>
+        <div class="mb-3 form-check">
+            <input  type="checkbox" class="form-check-input" id="confirmCheck" required>
+            <label class="form-check-label" for="confirmCheck" style="font-family: 'Roboto', sans-serif;">Save</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100" style="font-family: 'Montserrat', sans-serif;">Submit</button>
+    </form>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+        font-family: 'Roboto', sans-serif;
+        color: #343a40;
+    }
+    h1, h2 {
+        color: #343a40;
+    }
+    .form-label {
+        font-weight: bold;
+        color: #495057;
+    }
+    .form-control {
+        border-radius: 0.5rem;
+        border: 1px solid #ced4da;
+        padding: 0.75rem;
+    }
+    .form-control:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .btn-primary {
+        background-color: #ff7f50;
+        border-color: #ff7f50;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #ff4500;
+        border-color: #ff4500;
+    }
+    .container {
+        max-width: 600px;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+{% endblock %}
