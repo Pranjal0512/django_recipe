@@ -11,6 +11,10 @@
                 </div>
                 <h3>{{ recipe.recipe_name }}</h3>
                 <p>{{ recipe.recipe_description }}</p>
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="/recipeadd/"class="btn btn-add-more" >Add More</a>
+                    <a href="/del_recipe/{{recipe.id}}" class="btn btn-delete">Delete</a>
+                </div>
             </div>
         </div>
         {% endfor %}

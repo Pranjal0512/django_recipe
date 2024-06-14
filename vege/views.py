@@ -19,3 +19,9 @@ def recipesview(request):
     queryset = Recipe.objects.all()
     context={'recipes':queryset}
     return render(request, "recipeviews.html", context)
+
+def del_recipe(request,id):
+    queryset = Recipe.objects.get(id=id).delete()
+    context={'recipes':queryset}
+    return render(request, "recipeviews.html", context)
+

@@ -25,6 +25,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('recipeadd/', recipeadd, name='recipeadd'),
     path('recipesview/', recipesview, name='recipesview'),
+    path('del_recipe/<id>/', del_recipe, name='del_recipe'),
     path('success-page/', success_page, name='success_page'),
     path('contact/',contact , name='contact'),
     path('about/',about , name='about'),
