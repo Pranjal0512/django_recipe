@@ -22,15 +22,15 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from home.views import *
 from vege.views import *
 urlpatterns = [
-    path('', home, name='home'),
-    path('recipeadd/', recipeadd, name='recipeadd'),
-    path('recipesview/', recipesview, name='recipesview'),
-    path('del_recipe/<id>', del_recipe, name='del_recipe'),
-    path('update_recipe/<id>', update_recipe, name='update_recipe'),
-    path('success-page/', success_page, name='success_page'),
-    path('contact/',contact , name='contact'),
-    path('about/',about , name='about'),
-    path('admin/', admin.site.urls),
+    path('', home, name="home"),
+    path('recipeadd/', recipeadd, name="recipeadd"),
+    path('recipesview/', recipesview, name="recipesview"),
+    path('del_recipe/<id>', del_recipe, name="del_recipe"),
+    path('update_recipe/<id>', update_recipe, name="update_recipe"),
+    path('success-page/', success_page, name="success_page"),
+    path('contact/',contact , name="contact"),
+    path('about/',about , name="about"),
+    path('admin/', admin.site.urls),    
 ]
 
 if settings.DEBUG:

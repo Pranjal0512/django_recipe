@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 {% block start %}
 <div class="container">
+    <!-- Search Box -->
+    <div class="row my-4 justify-content-center">
+        <div class="col-md-6">
+            <form class="form-inline justify-content-right">
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" name="search" class="form-control" placeholder="Search recipes...">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-outline-success">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recipe Cards -->
     <div class="row">
         <!-- Example Recipe Card -->
         {% for recipe in recipes %}
