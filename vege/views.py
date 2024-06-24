@@ -22,7 +22,7 @@ def recipesview(request):
         queryset=queryset.filter(recipe_name__icontains=request.GET.get('search'))
     
         
-    context = {'recipe':queryset}
+    context = {'recipes':queryset}
     
     return render(request, 'recipeviews.html', context)
 

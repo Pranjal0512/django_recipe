@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block start %}
+
+<div class="container py-5">
+    <div class="form-header text-center mb-4 rounded">
+        <h2 class="headline-text">Login</h2>
+    </div>
+    <form class="bg-light p-5 rounded shadow">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+</div>
+
+{% endblock %}
