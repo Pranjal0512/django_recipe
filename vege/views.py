@@ -1,5 +1,9 @@
 from django.shortcuts import render, redirect
 from vege.models import *
+from django.contrib.auth.models import User
+from django.contrib import messages
+
+
 
 # Create your views here.
 def recipeadd(request):
@@ -53,4 +57,36 @@ def update_recipe(request,id):
     context = {'recipe':queryset}
     
     return render(request, 'recipeupdate.html', context)
+
+
+def login(request):
+    return render(request,'login.html')
+
+def signup(request):
+    if request.method =="POST":
+        first_name = request.POST.get('first_name')   
+        last_name = request.POST.get('last_name')   
+        username = request.POST.get('username')   
+        email = request.POST.get('email')   
+        password = request.POST.get('password') 
+
+        user=User.objects.filter(username=username)
+        if user.exists():
+            messages.info(request, "Username already exists.")
+            return redirect('/signup/')
+        
+
+        user=User.objects.create(
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            username=username,
+           
+        ) 
+        user.set_password(password)
+        user.save()
+        messages.info(request, "Account crerated Successfully.")
+        return redirect('/signup/')
+
+    return render(request,'signup.html')   
 

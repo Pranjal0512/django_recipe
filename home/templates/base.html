@@ -38,7 +38,7 @@
             text-align: center;
         }
         .navbar-custom {
-            background-color: #6d493c;
+            background-color: #481b0a;
         }
         .navbar-custom .navbar-brand, .navbar-custom .nav-link {
             color: #fff;
@@ -76,62 +76,56 @@
             border-radius: 8px;
         }
         body {
-        background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-        font-family: 'Roboto', sans-serif;
-        color: #343a40;
-    }
-    .recipe-image-container {
-    height: 200px; /* Set your desired height here */
-    overflow: hidden; /* Hide overflow if the image is larger than the container */
-}
-
-.recipe-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
-    object-position: center; /* Center the image within the container */
-}
-.btn-add-more {
-    background-color: #28a745; /* Green tint */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-add-more:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-.btn-delete {
-    background-color: #dc3545; /* Red tint */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-delete:hover {
-    background-color: #c82333; /* Darker red on hover */
-}
-
-.btn-update {
-    background-color: #ffc107;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Yellow tint */
-}
-
-.btn-update:hover {
-    background-color: #e0a800; /* Darker yellow on hover */
-}
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            font-family: 'Roboto', sans-serif;
+            color: #343a40;
+        }
+        .recipe-image-container {
+            height: 200px; /* Set your desired height here */
+            overflow: hidden; /* Hide overflow if the image is larger than the container */
+        }
+        .recipe-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+            object-position: center; /* Center the image within the container */
+        }
+        .btn-add-more {
+            background-color: #28a745; /* Green tint */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-add-more:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        .btn-delete {
+            background-color: #dc3545; /* Red tint */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-delete:hover {
+            background-color: #c82333; /* Darker red on hover */
+        }
+        .btn-update {
+            background-color: #ffc107;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Yellow tint */
+        }
+        .btn-update:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+        }
     </style>
 </head>
 <body>
@@ -142,7 +136,6 @@
 
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -164,6 +157,10 @@
                         <a class="nav-link" href="/contact/">Contact</a>
                     </li>
                 </ul>
+                <div class="ms-auto">
+                    <a class="btn btn-light me-2" href="/login/">Login</a>
+                    <a class="btn btn-primary" href="/signup/">Signup</a>
+                </div>
             </div>
         </div>
     </nav>

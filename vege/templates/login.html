@@ -2,20 +2,63 @@
 {% block start %}
 
 <div class="container py-5">
-    <div class="form-header text-center mb-4 rounded">
-        <h2 class="headline-text">Login</h2>
-    </div>
     <form class="bg-light p-5 rounded shadow">
+        <h2 class="text-center mb-4" style="font-family: 'Pacifico', cursive;">Login Page</h2>
         <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter username">
+            <label for="username" class="form-label">firstname</label>
+            <input type="text" class="form-control" id="firstname"name="first_name" placeholder="Enter firstname">
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">lastname</label>
+            <input type="text" class="form-control" id="lastname"name="last_name" placeholder="Enter lastname">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password">
+            <input type="password" class="form-control" name="passsword" id="password" placeholder="Enter password">
         </div>
+        <div class="mb-3 form-check">
+            <input  type="checkbox" class="form-check-input" id="confirmCheck" required>
+            <label class="form-check-label" for="confirmCheck" style="font-family: 'Roboto', sans-serif;">Save</label>
+        </div>
+        <p> Don't have account <a href="/signup/">signup</a></p>
         <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
 </div>
+<style>
+    body {
+        background-color: #f8f9fa;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    h1, h2 {
+        font-family: Arial, sans-serif;
+        color: #343a40;
+    }
+    .form-label {
+        font-weight: bold;
+    }
+    .form-control {
+        border-radius: 0.25rem;
+    }
+        .btn-primary {
+        background-color: #ff7f50;
+        border-color: #ff7f50;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #ff4500;
+        border-color: #ff4500;
+    }
+    .container {
+        max-width: 400px;
+    }
+    
+    .headline-text {
+        margin: 0;
+        font-size: 1.75rem;
+        padding: 0.5rem 0;
+        color: #391601;
+    }
+</style>
 
 {% endblock %}
